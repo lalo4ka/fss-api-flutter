@@ -44,6 +44,9 @@ public class Customer {
 
     @Column(name = "compras_mail")
     public String email;
+    
+    @Column(name = "ruta")
+    public String route;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lista")

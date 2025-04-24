@@ -25,22 +25,22 @@ public class PriceList {
     public int id;
 
     @Column(name = "nombre")
-    public String nombre;
+    public String name;
 
     @Column(name = "fecha")
-    public LocalDate fecha;
+    public LocalDate date;
 
     @OneToMany(
-            mappedBy = "lista",
+            mappedBy = "priceList",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )        
-    public List<ProductPriceList> listas = new ArrayList<>();
+    public List<ProductPriceList> list = new ArrayList<>();
 
     @Override
     public String toString() {
-        return "PriceList{" + "id=" + id + ", nombre=" + nombre + '}';
+        return "PriceList{" + "id=" + id + ", nombre=" + name + '}';
     }
 
     

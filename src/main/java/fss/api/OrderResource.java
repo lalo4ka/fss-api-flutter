@@ -1,6 +1,6 @@
 package fss.api;
 
-import fss.dto.res.CustomerOrderSummaryView;
+import fss.dto.res.OrdersByCustomerRes;
 import fss.service.OrderService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;

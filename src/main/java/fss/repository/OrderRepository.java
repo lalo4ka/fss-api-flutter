@@ -1,8 +1,14 @@
 package fss.repository;
 
-import fss.dto.res.OrderResponse;
-import jakarta.data.repository.Query;
+import fss.domain.model.Order;
+import jakarta.data.Sort;
+import jakarta.data.repository.Delete;
+import jakarta.data.repository.Find;
+import jakarta.data.repository.Insert;
 import jakarta.data.repository.Repository;
+import jakarta.data.repository.Save;
+import jakarta.data.repository.Update;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -12,13 +18,22 @@ import java.util.Optional;
 @Repository
 public interface OrderRepository {
 
-    @Query("""
-           select o.id, c.id, c.name 
-           FROM Order o JOIN  o.customer c 
-           where o.id=:id 
-           """)
-    Optional<OrderResponse> findOrderSummaryById(Integer id);
+    @Find
+    Optional<Order> byId(Integer id);
+    
+    @Find
+    List<Order> allCustomers(Sort<Order> orderSort);   
 
-
+    @Insert
+    Order insert(Order c);
+    
+    @Update
+    Order update(Order c);
+    
+    @Save
+    Order upsert(Order c);        
+    
+    @Delete
+    Order delete(Order o);
 
 }

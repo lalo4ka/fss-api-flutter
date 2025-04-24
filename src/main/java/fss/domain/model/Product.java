@@ -46,12 +46,12 @@ public class Product {
     public String unitSale;
 
     @OneToMany(
-            mappedBy = "producto",
+            mappedBy = "product",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )    
-    public List<ProductPriceList> listas = new ArrayList<>();
+    public List<ProductPriceList> productPriceList = new ArrayList<>();
 
     @Override
     public String toString() {

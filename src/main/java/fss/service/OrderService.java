@@ -7,7 +7,7 @@ import com.blazebit.persistence.view.EntityViewSetting;
 import fss.repository.CustomerRepository;
 import fss.domain.model.Customer;
 import fss.domain.model.Order;
-import fss.dto.res.CustomerOrderSummaryView;
+import fss.dto.res.OrdersByCustomerRes;
 import fss.repository.OrderRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

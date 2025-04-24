@@ -43,13 +43,13 @@ public class ProductPriceList {
     @MapsId("idProducto") // Mapea este atributo al 'idProducto' dentro de la clave compuesta
     //@JoinColumn(name = "id_producto", referencedColumnName = "id", insertable = false, updatable = false, foreignKey = @ForeignKey(name = "lista_producto_id_producto_fkey")) // Columna FK en la tabla 'lista_producto'
     @JoinColumn(name = "id_producto")
-    public Product producto;
+    public Product product;
 
     @ManyToOne(fetch = FetchType.LAZY) // Relación Many-to-One con la tabla lista_cliente 
     @MapsId("idLista") // Mapea este atributo al 'idLista' dentro de la clave compuesta
     //@JoinColumn(name = "id_lista", referencedColumnName = "id", insertable = false, updatable = false, foreignKey = @ForeignKey(name = "lista_producto_id_lista_fkey"))        
     @JoinColumn(name = "id_lista")
-    public PriceList lista;
+    public PriceList priceList;
 
     @Column(name = "precio")
     public double price;

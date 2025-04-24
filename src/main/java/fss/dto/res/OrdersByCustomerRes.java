@@ -18,7 +18,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @EntityView(Customer.class)
-public record CustomerOrderSummaryView(
+public record OrdersByCustomerRes(
         @IdMapping
         Integer id,
         String name,

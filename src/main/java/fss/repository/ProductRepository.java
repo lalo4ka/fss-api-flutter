@@ -3,11 +3,7 @@ package fss.repository;
 
 import fss.domain.model.Product;
 import fss.dto.res.ProductSummary;
-import jakarta.data.Sort;
-import jakarta.data.page.CursoredPage;
-import jakarta.data.page.Page;
 import jakarta.data.page.PageRequest;
-import jakarta.data.repository.CrudRepository;
 import jakarta.data.repository.Delete;
 import jakarta.data.repository.Find;
 import jakarta.data.repository.Insert;
@@ -17,7 +13,6 @@ import jakarta.data.repository.Save;
 import jakarta.data.repository.Update;
 import java.util.List;
 import java.util.Optional;
-import org.hibernate.query.Order;
 
 /**
  *
